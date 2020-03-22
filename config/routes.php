@@ -1,0 +1,37 @@
+<?php
+
+return [
+    '' => 						['controller' => 'main',	 'action' => 'index', 	  'prefix' => 'admin'],
+    'about-us' => 				['controller' => 'main',	 'action' => 'aboutUs',	  'prefix' => 'admin'],
+    'contact-us' => 			['controller' => 'main',	 'action' => 'contactUs', 'prefix' => 'admin'],
+    'product' => 				['controller' => 'product',	 'action' => 'index', 	  'prefix' => 'admin'],
+    'login' => 					['controller' => 'user',	 'action' => 'login'],
+    'signup' => 				['controller' => 'user',	 'action' => 'signup'],
+    'reset' =>					['controller' => 'user', 	 'action' => 'reset'],
+    'password/reset' =>			['controller' => 'user', 	 'action' => 'password'],
+    'profile' =>				['controller' => 'profile',	 'action' => 'index'],
+    'category' => 				['controller' => 'category', 'action' => 'index'],
+    'search' => 				['controller' => 'search',	 'action' => 'index'],
+    'admin' => 					['controller' => 'main',	 'action' => 'index',	  'path' => 'admin'],
+    'admin/order' =>			['controller' => 'order',	 'action' => 'index', 	  'path' => 'admin'],
+    'admin/order/view' => 		['controller' => 'order',	 'action' => 'view', 	  'path' => 'admin'],
+    'admin/order/update' => 	['controller' => 'order',	 'action' => 'update', 	  'path' => 'admin'],
+    'admin/order/delete' => 	['controller' => 'order',	 'action' => 'delete', 	  'path' => 'admin'],
+    'admin/category' => 		['controller' => 'category', 'action' => 'index', 	  'path' => 'admin'],
+    'admin/category/add' =>		['controller' => 'category', 'action' => 'add', 	  'path' => 'admin'],
+    'admin/category/edit' =>	['controller' => 'category', 'action' => 'edit', 	  'path' => 'admin'],
+    'admin/category/delete' =>	['controller' => 'category', 'action' => 'delete', 	  'path' => 'admin'],
+    'admin/cache' => 			['controller' => 'cache',	 'action' => 'index', 	  'path' => 'admin'],
+    'admin/cache/delete' => 	['controller' => 'cache',	 'action' => 'delete', 	  'path' => 'admin'],
+    'admin/user' => 			['controller' => 'user',	 'action' => 'index', 	  'path' => 'admin'],
+    'admin/user/edit' => 		['controller' => 'user',	 'action' => 'edit', 	  'path' => 'admin'],
+    'admin/user/delete' => 		['controller' => 'user',	 'action' => 'delete', 	  'path' => 'admin'],
+    'admin/product' => 			['controller' => 'product',	 'action' => 'index', 	  'path' => 'admin'],
+    'admin/product/add' => 		['controller' => 'product',	 'action' => 'add', 	  'path' => 'admin'],
+    'admin/product/edit' => 	['controller' => 'product',	 'action' => 'edit', 	  'path' => 'admin'],
+    'admin/product/delete' => 	['controller' => 'product',	 'action' => 'delete', 	  'path' => 'admin'],
+    'admin/question' => 		['controller' => 'question', 'action' => 'index', 	  'path' => 'admin'],
+    'admin/question/delete' => 	['controller' => 'question', 'action' => 'delete', 	  'path' => 'admin'],
+
+    'exceptions' => ['product', 'category']
+];

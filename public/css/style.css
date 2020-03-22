@@ -1,0 +1,120 @@
+.new .badge {
+    top: 15px;
+    left: 15px;
+    position: absolute;
+}
+
+.cart .badge {
+    top: 0em;
+    right: -0.08em;
+    position: absolute;
+}
+
+.hover-product:hover {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .30) !important;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
+}
+
+.product .active {
+    box-shadow: 0px 0px 0px 5px #6c757d;
+}
+
+.form-input .form-control {
+    height: auto;
+    padding: 10px;
+}
+
+.round {
+    border-radius: 30px;
+}
+
+.half-round {
+    border-radius: 15px !important;
+}
+
+.icon-feed a:hover {
+    color: gray !important;
+}
+
+#circle-red {
+    width: 30px;
+    height: 30px;
+    background: red;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    border: solid 3px black;
+}
+
+#circle-yellow {
+    width: 30px;
+    height: 30px;
+    background: yellow;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    border: solid 3px black;
+}
+
+#circle-silver {
+    width: 30px;
+    height: 30px;
+    background: silver;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    border: solid 3px black;
+}
+
+#circle-gray {
+    width: 30px;
+    height: 30px;
+    background: gray;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    border: solid 3px black;
+}
+
+#circle-black {
+    width: 30px;
+    height: 30px;
+    background: black;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    border: solid 3px darkgray;
+}
+
+#circle-white {
+    width: 30px;
+    height: 30px;
+    background: white;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    border: solid 3px black;
+}
+
+#circle-purple {
+    width: 30px;
+    height: 30px;
+    background: blueviolet;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    border: solid 3px black;
+}
+
+#circle-blue {
+    width: 30px;
+    height: 30px;
+    background: cornflowerblue;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    border: solid 3px black;
+}

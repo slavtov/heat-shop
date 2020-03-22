@@ -1,0 +1,14 @@
+{
+	"name": "slavken/heatshop",
+	"description": "HeatShop is a PHP MVC shop",
+	"homepage": "https://github.com/slavken/HeatShop",
+	"autoload": {
+		"psr-4": {
+			"app\\": "app"
+		}
+	},
+	"require-dev": {},
+	"require": {
+		"swiftmailer/swiftmailer": "^6.2"
+	}
+}
