@@ -52,13 +52,13 @@ class Address extends Model
         if ($data['middle_name'] === true) $data['middle_name'] = null;
         if ($data['apartment'] === true)   $data['apartment']   = null;
 
-        $stmt = Db::query("UPDATE `address` SET {$values} WHERE id = :id", $data);
+        $stmt = Db::query("UPDATE `address` SET {$values} WHERE `id` = :id", $data);
         return $stmt->rowCount();
     }
 
     static function delete($id)
     {
-        $stmt = Db::query("DELETE FROM `address` WHERE id = :id", ['id' => $id]);
+        $stmt = Db::query("DELETE FROM `address` WHERE `id` = :id", ['id' => $id]);
         return $stmt->rowCount();
     }
 }

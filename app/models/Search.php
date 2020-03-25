@@ -9,6 +9,6 @@ class Search extends Model
 {
     static function findProducts($title)
     {
-        return Db::rowAll('SELECT * FROM product WHERE title LIKE :title', ['title' => $title]);
+        return Db::rowAll('SELECT * FROM `product` WHERE `title` LIKE :title', ['title' => $title]);
     }
 }

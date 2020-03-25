@@ -24,7 +24,7 @@ class User extends AppUser
 
         $data['id'] = (int) $_GET['id'];
 
-        $stmt = Db::query("UPDATE `users` SET {$values} WHERE id = :id", $data);
+        $stmt = Db::query("UPDATE `users` SET {$values} WHERE `id` = :id", $data);
         return $stmt->rowCount();
     }
 
@@ -44,7 +44,7 @@ class User extends AppUser
 
     static function getCountUsers()
     {
-        $stmt = Db::row('SELECT count(*) AS `count` FROM users');
+        $stmt = Db::row('SELECT count(*) AS `count` FROM `users`');
         return $stmt['count'];
     }
 }

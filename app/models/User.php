@@ -69,14 +69,14 @@ class User extends Model
 
     static function checkPassword()
     {
-        $stmt = Db::row("SELECT * FROM users WHERE `remember_token` = :token", ['token' => $_GET['token']]);
+        $stmt = Db::row("SELECT * FROM `users` WHERE `remember_token` = :token", ['token' => $_GET['token']]);
         if ($stmt) {
             $time = $stmt['time_token'] + 60*60;
 
             if ($time > time()) {
                 return $stmt;
             } else {
-                Db::query("UPDATE users SET `remember_token` = null, `time_token` = null WHERE `remember_token` = :token", ['token' => $_GET['token']]);
+                Db::query("UPDATE `users` SET `remember_token` = null, `time_token` = null WHERE `remember_token` = :token", ['token' => $_GET['token']]);
                 return false;
             }
         }
@@ -86,7 +86,7 @@ class User extends Model
 
     static function updatePassword()
     {
-        $stmt = Db::query("UPDATE users SET `password` = :password, `remember_token` = null, `time_token` = null WHERE `remember_token` = :token", [
+        $stmt = Db::query("UPDATE `users` SET `password` = :password, `remember_token` = null, `time_token` = null WHERE `remember_token` = :token", [
             'token'    => $_GET['token'],
             'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
         ]);
@@ -95,12 +95,12 @@ class User extends Model
 
     static function createToken()
     {
-        $stmt = Db::row("SELECT * FROM users WHERE `username` = :username", ['username' => $_POST['data']]);
+        $stmt = Db::row("SELECT * FROM `users` WHERE `username` = :username", ['username' => $_POST['data']]);
         if ($stmt) {
             $token = bin2hex(random_bytes(50));
             $time  = time();
 
-            $stmt = Db::query("UPDATE users SET `remember_token` = '{$token}', `time_token` = '{$time}' WHERE `username` = :username", ['username' => $_POST['data']]);
+            $stmt = Db::query("UPDATE `users` SET `remember_token` = '{$token}', `time_token` = '{$time}' WHERE `username` = :username", ['username' => $_POST['data']]);
             return $token;
         }
 

@@ -44,7 +44,7 @@ class Product extends Model
 
             $values = implode(', ', $arr);
 
-            return Db::rowAll("SELECT * FROM product WHERE id IN ({$values})");
+            return Db::rowAll("SELECT * FROM `product` WHERE `id` IN ({$values})");
         } else setcookie('recently_viewed', $id, time() + 60*60*24);
 
         return null;

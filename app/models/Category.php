@@ -37,7 +37,7 @@ class Category extends Model
 
     static function getCount($ids, $sql_part)
     {
-        $result = Db::row("SELECT count(*) as `count` FROM product WHERE category_id IN ({$ids}) $sql_part");
+        $result = Db::row("SELECT count(*) as `count` FROM `product` WHERE `category_id` IN ({$ids}) $sql_part");
         return (int) $result['count'];
     }
 

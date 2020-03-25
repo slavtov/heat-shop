@@ -39,7 +39,7 @@ class Profile extends Model
 
     static function getOrderProducts($id)
     {
-        return Db::rowAll("SELECT `order_product`.*, `product`.`img` FROM order_product 
+        return Db::rowAll("SELECT `order_product`.*, `product`.`img` FROM `order_product` 
         JOIN `product` ON `order_product`.`product_id` = `product`.`id` 
         WHERE order_id = :id", ['id' => $id]);
     }
@@ -65,7 +65,7 @@ class Profile extends Model
 
     static function updateAddress($id)
     {
-        $stmt = Db::query("UPDATE users SET `address_id` = '{$id}' WHERE id = :id", ['id' => (int) $_SESSION['user']['id']]);
+        $stmt = Db::query("UPDATE `users` SET `address_id` = '{$id}' WHERE `id` = :id", ['id' => (int) $_SESSION['user']['id']]);
         return $stmt->rowCount();
     }
 

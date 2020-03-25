@@ -26,7 +26,7 @@ class Order extends Model
 
     static function delete($id)
     {
-        $stmt = Db::query("DELETE FROM orders WHERE id = :id", ['id' => $id]);
+        $stmt = Db::query("DELETE FROM `orders` WHERE `id` = :id", ['id' => $id]);
         return $stmt->rowCount();
     }
 
@@ -38,7 +38,7 @@ class Order extends Model
 
     static function updateStatus($id, $status)
     {
-        $stmt = Db::query("UPDATE `orders` SET `status` = :status_at, `update_at` = :date_at WHERE id = :id", ['status_at' => $status, 'date_at' => date('Y-m-d H:i:s'), 'id' => $id]);
+        $stmt = Db::query("UPDATE `orders` SET `status` = :status_at, `update_at` = :date_at WHERE `id` = :id", ['status_at' => $status, 'date_at' => date('Y-m-d H:i:s'), 'id' => $id]);
         return $stmt->rowCount();
     }
 }

@@ -94,7 +94,7 @@ class Product extends Model
 
         $data['id'] = (int) $_GET['id'];
 
-        $stmt = Db::query("UPDATE `product` SET {$values} WHERE id = :id", $data);
+        $stmt = Db::query("UPDATE `product` SET {$values} WHERE `id` = :id", $data);
         return $stmt->rowCount();
     }
 
@@ -118,14 +118,14 @@ class Product extends Model
 
     static function getCountProducts()
     {
-        $stmt = Db::row('SELECT count(*) AS `count` FROM product');
+        $stmt = Db::row('SELECT count(*) AS `count` FROM `product`');
         return $stmt['count'];
     }
 
     static function getOrderProducts($id)
     {
-        return Db::rowAll("SELECT `order_product`.*, `product`.`img` FROM order_product 
+        return Db::rowAll("SELECT `order_product`.*, `product`.`img` FROM `order_product` 
         JOIN `product` ON `order_product`.`product_id` = `product`.`id` 
-        WHERE order_id = :id", ['id' => $id]);
+        WHERE `order_id` = :id", ['id' => $id]);
     }
 }
