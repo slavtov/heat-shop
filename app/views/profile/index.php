@@ -102,7 +102,7 @@
                                         <td><?=$order['status'] ? 'Completed' : 'Order Processing'; ?></td>
                                         <td><?=$order['date'];?></td>
                                         <td><?=$order['qty'];?></td>
-                                        <td><?=$order['sum'];?><?=$order['currency'];?></td>
+                                        <td><?=$order['sum'];?> <?=$order['currency'];?></td>
                                         <td class="text-center"><a href="profile/order?id=<?=$order['id'];?>"><i class="fa fa-eye <?=$classHref;?>"></i></a></td>
                                     </tr>
                                 <?php endforeach; ?>

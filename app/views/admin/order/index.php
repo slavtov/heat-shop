@@ -29,7 +29,7 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Username</th>
+                                <th>Customer</th>
                                 <th>Status</th>
                                 <th>Created at</th>
                                 <th>Updated at</th>
@@ -53,7 +53,7 @@
                                 <td><?=$order['date'];?></td>
                                 <td><?=$order['update_at'];?></td>
                                 <td><?=$order['qty'];?></td>
-                                <td><?=$order['sum'];?><?=$order['currency'];?></td>
+                                <td><?=$order['sum'];?> <?=$order['currency'];?></td>
                                 <td class="text-center"><a href="<?=ADMIN;?>/order/view?id=<?=$order['id'];?>" class="mr-3"><i class="fas fa-edit <?=$classEdit;?>"></i></a><a href="<?=ADMIN;?>/order/delete?id=<?=$order['id'];?>" class="delete"><i class="fas fa-trash <?=$classTrash;?>"></i></a></td>
                             </tr>
                         <?php endforeach; ?>

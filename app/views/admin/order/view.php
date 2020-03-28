@@ -43,7 +43,7 @@
                                         <td><?=$order['id'];?></td>
                                     </tr>
                                     <tr>
-                                        <th>User</th>
+                                        <th>Customer</th>
                                         <td><?=$order['username'];?></td>
                                     </tr>
                                     <tr>
@@ -64,7 +64,7 @@
                                     </tr>
                                     <tr>
                                         <th>Total</th>
-                                        <td><?=$order['sum'];?><?=$order['currency'];?></td>
+                                        <td><?=$order['sum'];?> <?=$order['currency'];?></td>
                                     </tr>
                                     <tr>
                                         <th>Note</th>
