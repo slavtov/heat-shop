@@ -12,7 +12,7 @@ class Profile extends Model
         return Db::row("SELECT * FROM `users` WHERE `id` = :id", ['id' => (int) $_SESSION['user']['id']]);
     }
 
-    static function getLastOrders($limit)
+    static function getLatestOrders($limit)
     {
         return Db::rowAll("SELECT `orders`.`id`, `orders`.`user_id`, `orders`.`status`, `orders`.`date`, `orders`.`update_at`, `orders`.`currency`, SUM(`order_product`.`qty`) AS `qty`, ROUND(SUM(`order_product`.`price`*`order_product`.`qty`), 2) AS `sum` FROM `orders` 
 		JOIN `order_product` ON `orders`.`id` = `order_product`.`order_id` 

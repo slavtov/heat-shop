@@ -18,7 +18,7 @@ class ProfileController extends Controller
     function indexAction()
     {
         $limit	 = 3;
-        $orders	 = Profile::getLastOrders($limit);
+        $orders	 = Profile::getLatestOrders($limit);
         $address = Profile::getUserAddress();
 
         $this->set(compact('orders', 'address'));
