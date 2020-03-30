@@ -22,9 +22,7 @@
                             <input type="password" class="form-control" name="confirm-password" placeholder="Confirm password" data-error="Password is not 6 lendth" value="<?=isset($_SESSION['form-data']['confirm-password']) ? html($_SESSION['form-data']['confirm-password']) : null;?>" required>
                         </div>
                     </div>
-                    <div class="form-group mt-4">
-                        <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
-                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block mt-4">Submit</button>
                     <div class="form-group">
                         <label class="custom-control custom-checkbox">
 							<input type="checkbox" class="custom-control-input" name="checkbox" checked required>

@@ -39,9 +39,7 @@
                                     <input type="password" class="form-control" name="confirm_password" placeholder="Confirm password" required>
                                 </div>
                             </div>
-                            <div class="form-group mt-4">
-                                <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
-                            </div>
+                            <button type="submit" class="btn btn-lg btn-primary btn-block mt-4">Submit</button>
                         </form>
                     </div>
                 </div>

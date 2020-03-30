@@ -37,9 +37,7 @@
                                 <label for="username" class="mr-2">Username</label>
                                 <input type="text" class="form-control" id="username" name="username" value="<?=$_SESSION['user']['username'];?>" value="<?=isset($_SESSION['form-data']['username']) ? html($_SESSION['form-data']['username']) : null;?>">
                             </div>
-                            <div class="form-group mt-4">
-                                <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
-                            </div>
+                            <button type="submit" class="btn btn-lg btn-primary btn-block mt-4">Submit</button>
                         </form>
                     </div>
                 </div>

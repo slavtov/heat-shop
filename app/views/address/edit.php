@@ -82,9 +82,7 @@
                                     <input type="number" class="form-control" id="zip" name="zip" value="<?=$address['zip'];?>" min="10000" max="999999">
                                 </div>
                             </div>
-                            <div class="form-group mt-4">
-                                <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
-                            </div>
+                            <button type="submit" class="btn btn-lg btn-primary btn-block mt-4">Submit</button>
                         </form>
                     </div>
                 </div>

@@ -14,9 +14,7 @@
                     <div class="form-group mb-4">
                         <input type="password" class="form-control" name="confirm-password" placeholder="Confirm password" required>
                     </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
-                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
                 </form>
             </div>
         </div>

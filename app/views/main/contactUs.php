@@ -28,9 +28,7 @@
                     <div class="form-group">
                         <textarea class="form-control" name="question" cols="30" rows="10" placeholder="Your Question" required><?=isset($_SESSION['form-data']['question']) ? html($_SESSION['form-data']['question']) : null;?></textarea>
                     </div>
-                    <div class="form-group mt-4">
-                        <button type="submit" class="btn btn-lg btn-primary btn-block">Send</button>
-                    </div>
+                        <button type="submit" class="btn btn-lg btn-primary btn-block mt-4">Send</button>
                 </form>
             </div>
         </div>

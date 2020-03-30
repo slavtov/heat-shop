@@ -22,9 +22,7 @@
 							<div class="custom-control-label">Remember me</div>
 						</label>
                     </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
-                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
                 </form>
             </div>
         </div>
