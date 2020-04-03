@@ -31,8 +31,8 @@ class ProductController extends Controller
             ]);
 
             if (Product::add()) {
-                $_SESSION['success'][]  = 'The product is added successfully!';
-            } else $_SESSION['error'][] = 'The product is not added';
+                $_SESSION['success'][]  = 'The product added successfully!';
+            } else $_SESSION['error'][] = 'The product not added';
 
             redirect(ADMIN . '/product');
         }
@@ -57,8 +57,8 @@ class ProductController extends Controller
             // ]);
 
             if (Product::edit()) {
-                $_SESSION['success'][]  = 'The product is changed';
-            } else $_SESSION['error'][] = 'The product is not changed';
+                $_SESSION['success'][]  = 'The product updated successfully!';
+            } else $_SESSION['error'][] = 'The product not updated';
 
             redirect();
         }
@@ -88,8 +88,8 @@ class ProductController extends Controller
         } else redirect();
 
         if (Product::delete($id)) {
-            $_SESSION['success'][]  = 'The order is deleted';
-        } else $_SESSION['error'][] = 'The order is not deleted';
+            $_SESSION['success'][]  = 'The order deleted successfully!';
+        } else $_SESSION['error'][] = 'The order not deleted';
 
         redirect(ADMIN . '/product');
     }

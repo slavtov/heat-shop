@@ -20,8 +20,8 @@ class QuestionController extends Controller
 
         if ($id) {
             if (Question::delete($id)) {
-                $_SESSION['success'][]  = 'The question is deleted';
-            } else $_SESSION['error'][] = 'The question is not deleted';
+                $_SESSION['success'][]  = 'The question deleted successfully!';
+            } else $_SESSION['error'][] = 'The question not deleted';
         }
 
         redirect();

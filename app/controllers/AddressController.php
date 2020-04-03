@@ -19,8 +19,8 @@ class AddressController extends Controller
     {
         if (!empty($_POST)) {
             if (Address::add()) {
-                $_SESSION['success'][]  = 'The address is added successfully!';
-            } else $_SESSION['error'][] = 'The address is not added';
+                $_SESSION['success'][]  = 'The address added successfully!';
+            } else $_SESSION['error'][] = 'The address not added';
 
             redirect('/profile/address');
         }
@@ -41,8 +41,8 @@ class AddressController extends Controller
 
         if (!empty($_POST)) {
             if (Address::edit($id)) {
-                $_SESSION['success'][]  = 'The address is updated successfully!';
-            } else $_SESSION['error'][] = 'The address is not changed';
+                $_SESSION['success'][]  = 'The address updated successfully!';
+            } else $_SESSION['error'][] = 'The address not updated';
 
             redirect('/profile/address');
         }
@@ -62,8 +62,8 @@ class AddressController extends Controller
             if ($address['user_id'] != $_SESSION['user']['id']) redirect();
 
             if (Address::delete($id)) {
-                $_SESSION['success'][]  = 'The address is deleted successfully!';
-            } else $_SESSION['error'][] = 'The address is not deleted';
+                $_SESSION['success'][]  = 'The address deleted successfully!';
+            } else $_SESSION['error'][] = 'The address not deleted';
         }
 
         redirect('/profile/address');

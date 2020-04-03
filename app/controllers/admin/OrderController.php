@@ -53,8 +53,8 @@ class OrderController extends Controller
         $id = (int) $_GET['id'];
 
         if (Order::delete($id)) {
-            $_SESSION['success'][]  = 'The order is deleted';
-        } else $_SESSION['error'][] = 'The order is not deleted';
+            $_SESSION['success'][]  = 'The order deleted successfully!';
+        } else $_SESSION['error'][] = 'The order not deleted';
 
         redirect(ADMIN . '/order');
     }

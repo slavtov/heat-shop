@@ -51,8 +51,8 @@ class ProfileController extends Controller
 
         if ($id) {
             if (Profile::updateAddress($id)) {
-                $_SESSION['success'][]  = 'The address is changed successfully!';
-            } else $_SESSION['error'][] = 'The address is not changed';
+                $_SESSION['success'][]  = 'The address updated successfully!';
+            } else $_SESSION['error'][] = 'The address not updated';
 
             redirect();
         }
@@ -72,8 +72,8 @@ class ProfileController extends Controller
             if (Profile::updateUser()) {
                 updateSession('user', $_POST);
 
-                $_SESSION['success'][]   = 'The data has been updated!';
-            } else  $_SESSION['error'][] = 'The data was not changed';
+                $_SESSION['success'][]   = 'The data updated successfully!';
+            } else  $_SESSION['error'][] = 'The data not updated';
             
             redirect();
         }
@@ -97,9 +97,9 @@ class ProfileController extends Controller
                     $checkPassword = Profile::updatePassword($newPassword);
 
                     if ($checkPassword) {
-                        $_SESSION['success'][] = 'Your password has been changed successfully!';
+                        $_SESSION['success'][] = 'The password updated successfully!';
                     }
-                } else $_SESSION['error'][] = 'The passwords are different';
+                } else $_SESSION['error'][] = "The passwords don't match";
             } else $_SESSION['error'][]     = 'Old password is incorrect';
             
             redirect();

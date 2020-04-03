@@ -31,7 +31,7 @@ class CacheController extends Controller
                 break;
         }
 
-        $_SESSION['success'][] = 'The cache is deleted successfully!';
+        $_SESSION['success'][] = 'The cache deleted successfully!';
 
         redirect();
     }

@@ -47,8 +47,8 @@ class UserController extends Controller
         $id = (int) $_GET['id'];
 
         if (User::delete($id)) {
-            $_SESSION['success'][]  = 'User is deleted';
-        } else $_SESSION['error'][] = 'User is not deleted';
+            $_SESSION['success'][]  = 'The user deleted successfully!';
+        } else $_SESSION['error'][] = 'The user not deleted';
 
         redirect(ADMIN . '/user');
     }

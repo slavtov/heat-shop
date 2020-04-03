@@ -45,7 +45,7 @@ class UserController extends Controller
                     updateSession('user', $data);
                 } else User::unique();
             } else {
-                $_SESSION['error'][]   = 'Passwords are not the same';
+                $_SESSION['error'][]   = "The passwords don't match";
                 $_SESSION['form-data'] = $_POST;
             }
 
@@ -91,7 +91,7 @@ class UserController extends Controller
             if ($token = User::createToken()) {
                 User::mailPassword($token);
             } else {
-                $_SESSION['error'][] = "Email or Username are not found";
+                $_SESSION['error'][] = "Email or Username aren't found";
             }
 
             redirect();
@@ -108,10 +108,10 @@ class UserController extends Controller
                     if ($_POST['password'] == $_POST['confirm-password']) {
                         User::updatePassword();
 
-                        $_SESSION['success'][] = 'The password is updated successfully!';
+                        $_SESSION['success'][] = 'The password updated successfully!';
                         redirect('login');
                     } else {
-                        $_SESSION['error'][] = 'The passwords are not equal';
+                        $_SESSION['error'][] = "The passwords don't match";
                         redirect();
                     }
                 }

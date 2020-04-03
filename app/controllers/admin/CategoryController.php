@@ -18,8 +18,8 @@ class CategoryController extends Controller
     {
         if (!empty($_POST)) {
             if (Category::add()) {
-                $_SESSION['success'][]  = 'The category is added successfully!';
-            } else $_SESSION['error'][] = 'The category is not added';
+                $_SESSION['success'][]  = 'The category added successfully!';
+            } else $_SESSION['error'][] = 'The category not added';
 
             redirect(ADMIN . '/category');
         }
@@ -43,8 +43,8 @@ class CategoryController extends Controller
             ]);
 
             if (Category::edit()) {
-                $_SESSION['success'][]  = 'The category is updated';
-            } else $_SESSION['error'][] = 'The category is not changed';
+                $_SESSION['success'][]  = 'The category updated successfully!';
+            } else $_SESSION['error'][] = 'The category not updated';
 
             redirect();
         }
@@ -79,8 +79,8 @@ class CategoryController extends Controller
         }
 
         if (Category::delete($id)) {
-            $_SESSION['success'][]  = 'The category is deleted';
-        } else $_SESSION['error'][] = 'The category is not deleted';
+            $_SESSION['success'][]  = 'The category deleted successfully!';
+        } else $_SESSION['error'][] = 'The category not deleted';
 
         redirect();
     }
