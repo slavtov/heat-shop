@@ -39,7 +39,7 @@
                             <table class="table table-bordered table-hover">
                                 <tbody>
                                     <tr>
-                                        <td>ID</td>
+                                        <th>ID</th>
                                         <td><?=$order['id'];?></td>
                                     </tr>
                                     <tr>
