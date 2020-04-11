@@ -16,7 +16,7 @@ class View
         $this->controller = $route['controller'];
         $this->view 	  = $view;
         $this->meta 	  = $meta;
-        $this->path 	  = (isset($route['path'])) ? $route['path'] : null;
+        $this->path 	  = $route['path'] ?? null;
 
         if ($layout === false) {
             $this->layout = false;

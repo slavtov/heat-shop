@@ -18,9 +18,9 @@ abstract class BaseController
         $this->route 	  = $route;
         $this->controller = $route['controller'];
         $this->view 	  = $route['action'];
-        $this->path 	  = (isset($route['path']))   ? $route['path'] . '\\' : null;
-        $this->alias	  = (isset($route['alias']))  ? $route['alias']       : null;
-        $this->prefix 	  = (isset($route['prefix'])) ? $route['prefix']      : null;
+        $this->alias	  = $route['alias'] ?? null;
+        $this->prefix 	  = $route['prefix'] ?? null;
+        $this->path 	  = isset($route['path']) ? $route['path'] . '\\' : null;
     }
 
     function set($data)

@@ -41,7 +41,7 @@ class Router
         } else {
             $route				 = explode('/', $this->url);
             $route['controller'] = $route[0];
-            $route['action']	 = isset($route[1]) ? $route[1] : null;
+            $route['action']	 = $route[1] ?? null;
 
             $controller = ucfirst($route['controller']) . 'Controller';
             $action 	= $route['action'] . 'Action';

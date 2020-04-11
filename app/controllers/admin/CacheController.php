@@ -13,7 +13,7 @@ class CacheController extends Controller
 
     function deleteAction()
     {
-        $key = isset($_GET['key']) ? $_GET['key'] : null;
+        $key = $_GET['key'] ?? null;
 
         switch ($key) {
             case 'category':

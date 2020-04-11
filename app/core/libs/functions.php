@@ -10,7 +10,7 @@ function redirect($url = false)
 	if ($url) {
 		$redirect = $url;
 	} else {
-		$redirect = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : PATH;
+		$redirect = $_SERVER['HTTP_REFERER'] ?? PATH;
 	}
 
 	header('Location: ' . $redirect);

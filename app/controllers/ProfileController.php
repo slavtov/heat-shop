@@ -59,7 +59,7 @@ class ProfileController extends Controller
         
         $address	 = Profile::getAddress();
         $addresses	 = Profile::getAddresses();
-        $userAddress = isset($addresses[$address]) ? $addresses[$address] : null;
+        $userAddress = $addresses[$address] ?? null;
         unset($addresses[$address]);
 
         $this->set(compact('address', 'addresses', 'userAddress'));
