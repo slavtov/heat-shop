@@ -103,7 +103,7 @@
 
     <footer class="bg-dark text-light mt-5 py-5">
         <div class="container">
-            <div class="row">
+            <div class="row text-center text-md-left">
                 <div class="col-md-4 mb-5">
                     <div class="navbar-brand">
                         <img src="img/logo.png" class="d-inline-block align-top" height="40" width="40" alt="">
