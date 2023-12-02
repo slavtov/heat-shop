@@ -136,7 +136,7 @@
                             <h5 class="mb-4 font-weight-bold text-uppercase">Connect</h5>
                             <div class="h5 icon-feed">
                                 <a class="text-white-50" href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin mr-1"></i></a>
-                                <a class="text-white-50" href="https://github.com/slavken/HeatShop" target="_blank"><i class="fab fa-github mr-1"></i></a>
+                                <a class="text-white-50" href="https://github.com/slavtov/HeatShop" target="_blank"><i class="fab fa-github mr-1"></i></a>
                                 <a class="text-white-50" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter mr-1"></i></a>
                                 <a class="text-white-50" href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f mr-1"></i></a>
                                 <a class="text-white-50" href="https://vk.com/" target="_blank"><i class="fab fa-vk mr-1"></i></a>

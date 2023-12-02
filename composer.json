@@ -1,7 +1,7 @@
 {
-	"name": "slavken/heatshop",
+	"name": "slavtov/heatshop",
 	"description": "HeatShop is a PHP MVC shop",
-	"homepage": "https://github.com/slavken/HeatShop",
+	"homepage": "https://github.com/slavtov/HeatShop",
 	"autoload": {
 		"psr-4": {
 			"app\\": "app"
